@@ -55,3 +55,22 @@ def masuk_keranjang(menu, jumlah):
 def tampilan_pesanan():
     print("pesanan anda: ")
     pesanan.tampilkan_pesanan
+
+def hitung_harga():
+    total = pesanan.bayar_totalan()
+    print(f"Total biaya yang harus dibayarkan adalah {total} rupiah, terimakasih sudah berbelanja.")
+
+tampilan_menu()
+
+while True:
+    pilihan = input("pilih varian yang anda inginkan. (ketik 'done' jika telah selesai): ").strip()
+    if pilihan.lower() == 'done':
+        break
+    elif pilihan in daftar_menu:
+        jumlah_order = int(input("masukkan jumlah yang dipesan: "))
+        masuk_keranjang(pilihan, jumlah_order)
+    else:
+        print("input tidak valid. pilih menu yang ada ")
+
+tampilan_pesanan()
+hitung_harga()
