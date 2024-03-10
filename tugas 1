@@ -17,3 +17,22 @@ class Pesanan:
             while temp.next_node:
                 temp = temp.next_node
             temp.next_node = daftar_pesanan
+
+    def tampilkan_pesanan(self):
+        temp = self.head
+        while temp:
+            print(f"{temp.menu}  - {temp.harga} Rupiah")
+            temp = temp.next_node
+
+    def bayar_totalan(self):
+        total_harga = 0
+        temp = self.head
+        while temp:
+            total_harga += temp.harga
+            temp = temp.next_node
+        return total_harga
+
+pesanan = Pesanan()
+
+daftar_menu = {
+    "miexue ice cream"       : 5000,
