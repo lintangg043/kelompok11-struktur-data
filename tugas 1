@@ -36,3 +36,22 @@ pesanan = Pesanan()
 
 daftar_menu = {
     "miexue ice cream"       : 5000,
+    "boba shake"            : 16000,
+    "mi sundae"             : 14000,
+    "mi ganas"              : 11000,
+    "creamy mango boba"     : 22000
+}
+
+def tampilan_menu():
+    print("daftar menu")
+    for nama_menu, harga in daftar_menu.items():
+        print(f"{nama_menu} - {harga} Rupiah")
+
+def masuk_keranjang(menu, jumlah):
+    for _ in range(jumlah):
+        pesanan.tambah_pesanan(menu, daftar_menu[menu])
+        print(f"{jumlah} {menu} telah ditambahkan ke keranjang")
+
+def tampilan_pesanan():
+    print("pesanan anda: ")
+    pesanan.tampilkan_pesanan
