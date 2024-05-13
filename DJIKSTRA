@@ -1,0 +1,17 @@
+from collections import defaultdict
+
+class AdjacencyListGraph:
+    def __init__(self):
+        self.vertices: set[str] = set()
+        self.adjacency_list: defaultdict[str, list[tuple[str, int]]] = defaultdict(list)
+
+    def add_vertex(self, vertex: str) -> bool:
+        if vertex not in self.vertices:
+            self.vertices.add(vertex)
+            return True
+        return False
+
+    def add_edge(self, vertex1: str, vertex2: str, weight: int = 1) -> bool:
+        if vertex1 in self.vertices and vertex2 in self.vertices:
+            self.adjacency_list[vertex1].append((vertex2, weight))
+            self.adjacency_list[vertex2].append((vertex1, weight))  # for undirected graph
