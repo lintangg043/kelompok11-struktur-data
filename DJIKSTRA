@@ -49,3 +49,19 @@ graph.add_edge("Surabaya", "Pasuruhan", 69)
 graph.add_edge("Surabaya", "Probolinggo", 102)
 graph.add_edge("Surabaya", "Malang", 95)
 graph.add_edge("Surabaya", "Batu", 104)
+graph.add_edge("Surabaya", "Blitar", 164)
+graph.add_edge("Surabaya", "Tulungagung", 155)
+graph.add_edge("Surabaya", "Trenggalek", 176)
+graph.add_edge("Surabaya", "Ponorogo", 194)
+graph.add_edge("Surabaya", "Madiun", 165)
+graph.add_edge("Surabaya", "Magetan", 189)
+graph.add_edge("Surabaya", "Ngawi", 182)
+graph.add_edge("Surabaya", "Nganjuk", 116)
+graph.add_edge("Surabaya", "Kediri", 124)
+
+#... (rest of the edges)
+
+#... (rest of the edges)
+
+# Display the graph
+graph.display_graph()
